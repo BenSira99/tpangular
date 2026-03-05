@@ -1,3 +1,8 @@
 <div class="boite-message">
-  <p>{{ contenuMessage }}</p>
+  @if (personneAffichee) {
+    <p><strong>Identité :</strong> {{ personneAffichee.prenom }} {{ personneAffichee.nom }}</p>
+    <p><strong>Téléphone :</strong> {{ personneAffichee.numero }}</p>
+  } @else {
+    <p>Aucune donnée disponible.</p>
+  }
 </div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Personne } from '../models/personne.modele';
 
 @Component({
   selector: 'app-message',
@@ -8,5 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './message.css',
 })
 export class ComposantMessage {
-  @Input() contenuMessage: string = '';
+  @Input() personneAffichee: Personne | null = null;
 }
