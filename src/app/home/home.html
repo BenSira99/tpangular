@@ -1,5 +1,9 @@
 <div class="conteneur-bouton">
   <button (click)="cliquerBouton()" class="bouton-primaire">
-    Cliquez ici (Home)
+    {{ estAffiche ? 'Masquer le message' : 'Afficher le message' }}
   </button>
 </div>
+
+@if (estAffiche) {
+  <app-message [contenuMessage]="'Ceci est un message généré dynamiquement !'"></app-message>
+}
