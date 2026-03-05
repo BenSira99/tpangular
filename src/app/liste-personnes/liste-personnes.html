@@ -1,0 +1,25 @@
+<div class="conteneur-tableau">
+  <h3>Liste des Personnes</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Numéro de Téléphone</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (personne de tableauPersonnes; track personne.numero) {
+        <tr>
+          <td>{{ personne.prenom }}</td>
+          <td>{{ personne.nom }}</td>
+          <td>{{ personne.numero }}</td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="3" class="aucun-donnee">Aucune personne enregistrée.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
